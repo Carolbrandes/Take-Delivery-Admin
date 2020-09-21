@@ -1,0 +1,414 @@
+// MIXINS
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+}
+
+@mixin box-shadow($v1, $v2, $v3, $v4) {
+  box-shadow: $v1 $v2 $v3 $v4;
+  -webkit-box-shadow: $v1 $v2 $v3 $v4;
+  -moz-box-shadow: $v1 $v2 $v3 $v4;
+  -ms-box-shadow: $v1 $v2 $v3 $v4;
+}
+
+// Placeholders
+%justify-content-spaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+// COLORS
+$cor01: #1888e9;
+$cor02: #f2f2f2;
+$cor03: #fff;
+$cor04: #0458a1;
+$cor05: #0066bf;
+$cor06: #c5cbd4;
+$cor07: #E0E7FF;
+$cor08: #626262;
+$cor09: #00D9A6;
+
+// VARIABLES
+$width-input: 272px;
+
+// RESET
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $cor02;
+  color: #272d3b;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.usuario {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  @include border-radius(50%);
+  background-color: #ff9f53;
+  color: $cor03;
+  font-size: 20px;
+}
+
+.cardBox {
+  @include box-shadow($v1: 0px, $v2: 0px, $v3: 16px, $v4: #272d3b0f);
+  @include border-radius(16px);
+}
+
+// ESTILO TEXTOS E TITULOS
+.titleH1 {
+  font-size: 26px;
+  line-height: 32px;
+}
+
+.titleH2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.titleH3 {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+
+// ESTILOS FORMULARIO
+.form-label {
+  margin-bottom: 20px;
+  label {
+    display: block;
+    color: #8c98a9;
+    font-size: 12px;
+  }
+
+  input {
+    @include border-radius(5px);
+    width: $width-input;
+    height: 40px;
+    border: 1px solid #e0e7ff;
+    outline: none;
+    padding-left: 15px;
+  }
+}
+
+.select {
+  border: none;
+  color: $cor01;
+}
+
+.btn {
+  @include border-radius(25px);
+  @include box-shadow($v1: 0px, $v2: 4px, $v3: 11px, $v4: #1888e973);
+  background-color: $cor01;
+  color: $cor03;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.inputBusca{
+  width: 1100px;
+  height: 48px;
+  border: 1px solid $cor07;
+  @include border-radius(4px);
+  padding-left: 50px;
+  background-image: url(../../assets/procurar.png);
+  background-repeat: no-repeat;
+  background-position: 10px;
+
+  @media screen and (max-width: 1799px){
+    width: 800px;
+  }
+
+  @media screen and (max-width: 1400px){
+    width: 750px;
+  }
+
+  @media screen and (max-width: 1400px){
+    width: 650px;
+  }
+
+  &__container{
+    position: relative;
+    left: -10px;
+  }
+
+  
+}
+// ESTILOS FORMULARIO FIM
+
+// ESTILO TABELA
+.table-container{
+  margin-top: 60px;
+  height: 600px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+      display: none;
+  }
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  
+  th{
+    padding: 20px;
+    border-bottom: 1px solid $cor08;
+  }
+
+  &:first-of-type th{
+    padding-left: 15px;
+  }
+
+  tbody{
+    td{
+     padding: 25px 5px;
+     border-bottom: 2px solid #d1d0d0;
+     text-align: center;
+    }
+  }
+
+  .status-ativo{
+    color: $cor09;
+  }
+
+  .icone-ativo{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    @include border-radius(50%);
+    background-color: $cor09;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+
+  .tabela-icone{
+    display: inline-block;
+    margin-right: 5px;
+  }
+}
+
+
+// pag Home
+.home {
+  @include box-shadow($v1: 0px, $v2: 3px, $v3: 20px, $v4: #00000008);
+  width: 90%;
+  height: 80vh;
+  display: flex;
+  margin: 10vh auto;
+
+  &__card {
+    width: 60%;
+    height: 100%;
+    background-image: url(../../assets/cardBase.png);
+    background-size: 100% 100%;
+  }
+
+  &__logo {
+    width: $width-input;
+    margin-bottom: 30px;
+    position: relative;
+    left: -9px;
+  }
+
+  &__login {
+    width: 50%;
+    background-color: $cor03;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__btn {
+    width: 272px;
+    height: 41px;
+    margin-bottom: 20px;
+  }
+
+  &__esqueceu-senha {
+    text-decoration: none;
+    color: $cor01;
+    font-size: 14px;
+  }
+}
+// pag Home fim
+
+// componentes comuns
+.menu {
+  min-width: 88px;
+  width: 6%;
+  margin-right: 6%;
+
+  &__bg01 {
+    min-width: inherit;
+    width: inherit;
+    padding: 30px 10px 20px 10px;
+    background-color: $cor04;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-bottom: 40px;
+  }
+
+  &__bg02 {
+    background-color: $cor05;
+    width: 108px;
+    height: 100vh;
+    position: relative;
+  }
+
+  &__div-icone {
+    background-color: $cor05;
+    width: 108px;
+    text-align: center;
+    padding: 20px 0;
+    &:hover {
+      background-color: $cor04;
+    }
+  }
+
+  &__icone {
+    color: $cor02;
+    font-size: 24px;
+  }
+
+  &__usuario {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 15px 0;
+  color: $cor06;
+  font-size: 12px;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.conteudo {
+  background-color: $cor03;
+  display: flex;
+}
+
+.main {
+  width: 75%;
+  position: relative;
+  top: 50px;
+
+  &-header {
+    @extend %justify-content-spaceBetween;
+    align-items: flex-end;
+    margin-bottom: 50px;
+
+    &__btn-criar-ordem {
+      width: 178px;
+      height: 49px;
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+    }
+
+    &__btn-icone {
+      font-size: 22px;
+      margin-right: 20px;
+    }
+  }
+}
+// componentes comuns fim
+
+// pag Painel principal
+.painel-principal {
+  &__graficos {
+    display: flex;
+  }
+
+  &__container-grafico02 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 120px;
+  }
+
+  &__graficoPizza {
+    margin-bottom: 40px;
+  }
+
+  &__container-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  &__grafico02 {
+    margin-top: 20px;
+  }
+
+  &__grafico02-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__grafico02-nav {
+    a {
+      display: inline-block;
+      text-decoration: none;
+      color: #a7a5a5;
+      margin-left: 50px;
+    }
+  }
+
+  &__filtro-perido {
+    display: flex;
+    align-items: baseline;
+
+    .select {
+      margin-left: 10px;
+      height: 20px;
+    }
+  }
+}
+
+//pag ordens de servico
+.ordens-de-pagamento{
+  &__busca{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    position: relative;
+    left: -10px;
+
+    a{
+      text-decoration: none;
+      color: $cor01;
+      position: relative;
+      left: -10px;
+    }
+  }
+}

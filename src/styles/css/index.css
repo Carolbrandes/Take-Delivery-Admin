@@ -1,0 +1,361 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f2f2f2;
+  color: #272d3b;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.usuario {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  background-color: #ff9f53;
+  color: #fff;
+  font-size: 20px;
+}
+
+.cardBox {
+  box-shadow: 0px 0px 16px #272d3b0f;
+  -webkit-box-shadow: 0px 0px 16px #272d3b0f;
+  -moz-box-shadow: 0px 0px 16px #272d3b0f;
+  -ms-box-shadow: 0px 0px 16px #272d3b0f;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+}
+
+.titleH1 {
+  font-size: 26px;
+  line-height: 32px;
+}
+
+.titleH2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.titleH3 {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+.form-label {
+  margin-bottom: 20px;
+}
+.form-label label {
+  display: block;
+  color: #8c98a9;
+  font-size: 12px;
+}
+.form-label input {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  width: 272px;
+  height: 40px;
+  border: 1px solid #e0e7ff;
+  outline: none;
+  padding-left: 15px;
+}
+
+.select {
+  border: none;
+  color: #1888e9;
+}
+
+.btn {
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  box-shadow: 0px 4px 11px #1888e973;
+  -webkit-box-shadow: 0px 4px 11px #1888e973;
+  -moz-box-shadow: 0px 4px 11px #1888e973;
+  -ms-box-shadow: 0px 4px 11px #1888e973;
+  background-color: #1888e9;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.inputBusca {
+  width: 1100px;
+  height: 48px;
+  border: 1px solid #E0E7FF;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  padding-left: 50px;
+  background-image: url(../../assets/procurar.png);
+  background-repeat: no-repeat;
+  background-position: 10px;
+}
+@media screen and (max-width: 1799px) {
+  .inputBusca {
+    width: 800px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .inputBusca {
+    width: 750px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .inputBusca {
+    width: 650px;
+  }
+}
+.inputBusca__container {
+  position: relative;
+  left: -10px;
+}
+
+.table-container {
+  margin-top: 60px;
+  height: 600px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.table-container::-webkit-scrollbar {
+  display: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table th {
+  padding: 20px;
+  border-bottom: 1px solid #626262;
+}
+table:first-of-type th {
+  padding-left: 15px;
+}
+table tbody td {
+  padding: 25px 5px;
+  border-bottom: 2px solid #d1d0d0;
+  text-align: center;
+}
+table .status-ativo {
+  color: #00D9A6;
+}
+table .icone-ativo {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  background-color: #00D9A6;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+table .tabela-icone {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.home {
+  box-shadow: 0px 3px 20px #00000008;
+  -webkit-box-shadow: 0px 3px 20px #00000008;
+  -moz-box-shadow: 0px 3px 20px #00000008;
+  -ms-box-shadow: 0px 3px 20px #00000008;
+  width: 90%;
+  height: 80vh;
+  display: flex;
+  margin: 10vh auto;
+}
+.home__card {
+  width: 60%;
+  height: 100%;
+  background-image: url(../../assets/cardBase.png);
+  background-size: 100% 100%;
+}
+.home__logo {
+  width: 272px;
+  margin-bottom: 30px;
+  position: relative;
+  left: -9px;
+}
+.home__login {
+  width: 50%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home__btn {
+  width: 272px;
+  height: 41px;
+  margin-bottom: 20px;
+}
+.home__esqueceu-senha {
+  text-decoration: none;
+  color: #1888e9;
+  font-size: 14px;
+}
+
+.menu {
+  min-width: 88px;
+  width: 6%;
+  margin-right: 6%;
+}
+.menu__bg01 {
+  min-width: inherit;
+  width: inherit;
+  padding: 30px 10px 20px 10px;
+  background-color: #0458a1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.menu__logo {
+  margin-bottom: 40px;
+}
+.menu__bg02 {
+  background-color: #0066bf;
+  width: 108px;
+  height: 100vh;
+  position: relative;
+}
+.menu__div-icone {
+  background-color: #0066bf;
+  width: 108px;
+  text-align: center;
+  padding: 20px 0;
+}
+.menu__div-icone:hover {
+  background-color: #0458a1;
+}
+.menu__icone {
+  color: #f2f2f2;
+  font-size: 24px;
+}
+.menu__usuario {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer {
+  text-align: center;
+  padding: 15px 0;
+  color: #c5cbd4;
+  font-size: 12px;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.conteudo {
+  background-color: #fff;
+  display: flex;
+}
+
+.main {
+  width: 75%;
+  position: relative;
+  top: 50px;
+}
+.main-header {
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+.main-header__btn-criar-ordem {
+  width: 178px;
+  height: 49px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+.main-header__btn-icone {
+  font-size: 22px;
+  margin-right: 20px;
+}
+
+.painel-principal__graficos {
+  display: flex;
+}
+.painel-principal__container-grafico02 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 120px;
+}
+.painel-principal__graficoPizza {
+  margin-bottom: 40px;
+}
+.painel-principal__container-card {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 15px;
+}
+.painel-principal__grafico02 {
+  margin-top: 20px;
+}
+.painel-principal__grafico02-header {
+  display: flex;
+  justify-content: space-between;
+}
+.painel-principal__grafico02-nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: #a7a5a5;
+  margin-left: 50px;
+}
+.painel-principal__filtro-perido {
+  display: flex;
+  align-items: baseline;
+}
+.painel-principal__filtro-perido .select {
+  margin-left: 10px;
+  height: 20px;
+}
+
+.ordens-de-pagamento__busca {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  position: relative;
+  left: -10px;
+}
+.ordens-de-pagamento__busca a {
+  text-decoration: none;
+  color: #1888e9;
+  position: relative;
+  left: -10px;
+}
+
+/*# sourceMappingURL=index.css.map */
